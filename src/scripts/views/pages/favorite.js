@@ -28,8 +28,7 @@ const Like = {
       noDataContainer.innerHTML = `
       <h2>Your Favorite Restaurant</h2>
       <div class="detail-nodb">
-          <h1>Data Not Available!</h1>
-          <h3>Please choose your favorite restaurant<h3>
+          <h1>Please choose your favorite restaurant</h1>
       </div>
      `;
     }
