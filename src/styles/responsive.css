@@ -1,0 +1,217 @@
+@media screen and (max-width: 900px) {
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .card {
+      width: 300px;
+    }
+  
+    .hero {
+      min-height: 250px;
+    }
+    
+    .hero_title h1 {
+      font-size: large;
+    }
+    
+    .hero_title h2 {
+      margin: 8px;
+      font-size: small;
+      font-weight: 200;
+      padding-bottom: 5px;
+    }
+  
+    .hero_title a {
+      margin: 0.4em;
+      font-size: small;
+      padding: 1em 0.5em;
+    }
+  
+    .container h2 {
+      padding-top: 20px;
+      font-size: larger;
+    }
+  
+    .img-tumb img {
+      height: 180px;
+      width: 100%;
+    }
+  
+    .details {
+      padding: 15px;
+    }
+    .rating {
+      display: block;
+      font-size: small;
+      font-weight: 500;
+      color: red;
+      margin-bottom: 8px;
+    }
+  
+    .details h1 a {
+      font-size: small ;
+      margin-bottom: 4px;
+      padding: 12px;
+    }
+  
+    .details p {
+      font-size: smaller;
+    }
+  
+    .city {
+      font-weight: 700;
+      padding: 2px 5px;
+    }
+
+    .img-restaurant {
+        max-height: 250px;
+    }
+      
+    .tittle-name h1{
+        font-size: x-large;
+    }
+
+    .detail-db{
+        margin: 0 auto;
+        width: 100%;
+    }
+      
+    .detail-db h1{
+        font-size: x-large;
+        padding-top: 10px;
+    }
+
+    .info-db{
+        display: block;
+        width: 80%;
+    }
+
+    .info-restaurant img{
+        width: 250px;
+    }
+
+    .info-restaurant h2, h4{
+        font-size: medium;
+        line-height: 1.5;
+    }
+      
+    .info-restaurant p{
+        font-size: small;
+    }
+
+    .info-db-menu{
+        display: block;
+        margin: 0 auto;
+      }
+      
+    .info-menu {
+        background-color: gray;
+        margin-top: 20px;
+        color: white;
+    }
+      
+    .info-menu li{
+        text-align: left;
+        padding-left: 10px;
+    }
+      
+    .info-menu h3 {
+        font-size: medium;
+    }
+
+    .info-db-reviews{
+        grid-template-columns: auto auto;
+    }
+
+    .label-form{
+        font-size: 1em;
+    }
+
+    .btn-form{
+        padding: 0.5em 0.6em;
+        margin: 10px auto;
+        font-size: 16px;
+    }
+
+    .overlay {
+        height: 180px;
+    }
+
+    .overlay h1 {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .overlay h3, p {
+        margin-bottom: 5px;
+        font-size: small;
+    }
+
+    .booking button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (min-width: 280px) {
+    .content {
+      grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {  
+    .content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+  }
+
+  .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
+  }
+
+  .app-bar .app-bar__menu {
+      display: none;
+  }
+
+  .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
+  }
+
+  .app-bar .app-bar__navigation ul li {
+      display: inline-block;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  
+}
+
+@media screen and (min-width: 850px) {
+  
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1600px) {
+  
+}

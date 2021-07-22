@@ -1,0 +1,527 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  background-color: tomato;
+  color: white;
+  padding: 6px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  padding: 10px;
+  color: coral;
+  cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: tomato;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 60px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 2px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: coral;
+  padding: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  width: 100%;
+  background: url(../public/images/heros/hero.jpg);
+  background-position: center;
+  object-fit: cover;
+  text-align: center;
+  border-radius: 0 0 20% 20% / 20%;
+}
+
+.hero_title {
+  align-self: center;
+  margin: auto 0;
+}
+
+.hero_title a {
+  color: white;
+  background-color: rgba(255, 93, 6, 0.9);
+  margin: 2em;
+  padding: 0.8em 1em;
+  text-align: center;
+  font-size: medium;
+  border-radius: 0.276em;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero_title a:hover {
+  color: tomato;
+  background-color: white;
+}
+
+.hero_title h1 {
+  color: white;
+  font-size: xx-large;
+  font-family: "Poppins", sans-serif;
+}
+
+.hero_title h2 {
+  color: whitesmoke;
+  margin: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+.container {
+  width: 100%;
+}
+
+.container h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.card {
+  width: 380px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  margin: 20px auto;
+  background: #fafafa;
+  border-radius: 15px 0;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 4px 14px rgb(247, 94, 67, 0.2);
+}
+
+.city {
+  position: absolute;
+  left: 0;
+  top: 15px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 700;
+  background: tomato;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.img-tumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-tumb img {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
+  border-radius: 15px 0;
+}
+
+.details {
+  padding: 30px;
+}
+
+.rating {
+  display: block;
+  font-size: medium;
+  font-weight: 700;
+  color: red;
+  margin-bottom: 18px;
+}
+
+.details h1 a {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 18px;
+  padding: 9px;
+  font-size: large;
+  text-transform: uppercase;
+  color: #363636;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.details h1 a:hover {
+  color: tomato;
+}
+
+.details p {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 18px;
+  color: #999;
+}
+
+.img-db {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.img-restaurant {
+  display: flex;
+  flex-direction: column;
+  margin-top: -40px;
+  max-height: 350px;
+  width: 100%;
+  background-position: center;
+  object-fit: cover;
+  text-align: center;
+  border-radius: 0 0 20% 20% / 20%;
+  opacity: 0.7;
+}
+
+.tittle-name {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tittle-name h1 {
+  color: black;
+  background: rgba(223, 82, 6, 0.5);
+  margin-bottom: 10px;
+  border-radius: 20px;
+  padding: 5px 20px;
+  font-size: xx-large;
+}
+
+.tittle-name h2 {
+  padding: 10px 20px;
+  background: rgba(24, 23, 23, 0.8);
+  border-radius: 20px;
+  font-size: large;
+}
+
+.detail-db {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.detail-db h1 {
+  font-size: xx-large;
+}
+
+.info-db {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: auto 50%;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.info-restaurant {
+  text-align: center;
+}
+
+.info-restaurant img {
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.info-restaurant h2,
+h4 {
+  text-align: left;
+}
+
+.info-restaurant p {
+  text-align: justify;
+}
+
+.info-db-menu {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: auto 50%;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.info-menu {
+  background-color: rgba(255, 93, 6, 0.782);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.detail-nodb {
+  background-color: rgba(255, 93, 6, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px auto;
+  text-align: center;
+  display: block;
+  width: 60%;
+}
+
+.detail-nodb h3 {
+  text-align: center;
+}
+
+.info-menu ul {
+  text-align: left;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.info-menu h3 {
+  text-align: center;
+}
+
+.info-db-reviews {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 30% 30% 30%;
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.review {
+  background-color: rgba(107, 104, 103, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.review h4 {
+  text-align: center;
+}
+
+.form-review {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form-review form {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+}
+
+.form-review input[type="text"],
+.form-review textarea {
+  width: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin: 10px auto 5px auto;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.label-form {
+  font-size: 1.5em;
+}
+
+.btn-form {
+  color: white;
+  background-color: tomato;
+  padding: 0.9em 1em;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border-color: coral;
+  width: 25%;
+  margin: 20px auto;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-form:hover {
+  color: tomato;
+  background-color: white;
+  border-color: rgb(73, 24, 6);
+}
+
+footer {
+  text-align: center;
+  color: white;
+}
+
+.copyright {
+  background-color: black;
+}
+
+.copyright p {
+  margin: 0 auto;
+}
+.overlay {
+  background: url(../public/images/hero-image_2.jpg);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: auto;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20% 20% 0 0 / 20%;
+}
+.overlay .booking {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(165deg, tomato 10%, #e7580a6b 90%);
+}
+
+.overlay h1 {
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+.overlay h3,
+p {
+  margin-bottom: 10px;
+}
+
+.booking button {
+  border: none;
+  outline: none;
+  padding: 14px 20px;
+  border-radius: 50px;
+  color: tomato;
+  background: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 20px 0 #0000003b;
+  font-family: "Poppins", sans-serif;
+}
+
+.booking button:hover {
+  cursor: pointer;
+  color: white;
+  background: tomato;
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  top: 75px;
+  right: 16px;
+  background-color: coral;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  --size: 100px;
+  --primary-color: coral;
+  height: var(--size);
+  width: var(--size);
+  margin: 0 auto;
+}
+
+@keyframes ghost {
+  from,
+  to {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.5;
+  }
+}
+.loading {
+  background: var(--primary-color);
+  transform: rotate(45deg) scale(0.5);
+  position: relative;
+}
+.loading:after {
+  content: "";
+  border: calc(var(--size) / 8) solid var(--primary-color);
+  height: 100%;
+  width: 100%;
+  display: block;
+  transform: scale(1.4);
+  box-sizing: border-box;
+  animation: ghost 1s ease-in-out infinite;
+}
