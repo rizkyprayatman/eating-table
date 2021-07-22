@@ -96,7 +96,7 @@ AppBar
   flex-direction: column;
   min-height: 300px;
   width: 100%;
-  background: url(../public/images/hero.jpg);
+  background: url("/images/hero-xl.jpg");
   background-position: center;
   object-fit: cover;
   text-align: center;

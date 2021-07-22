@@ -8,6 +8,7 @@
   }
 
   .hero {
+    background: url("/images/hero-large.jpg");
     min-height: 250px;
   }
 
@@ -185,6 +186,10 @@
   .app-bar .app-bar__navigation {
     position: static;
     width: 100%;
+  }
+
+  .hero {
+    background: url("/images/hero-small.jpg");
   }
 
   .app-bar .app-bar__navigation ul li {
