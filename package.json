@@ -6,7 +6,9 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "test": "karma start",
+    "build": "webpack --config webpack.prod.js",
     "build-image": "node sharp.js",
+    "lint": "eslint ./src",
     "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
@@ -38,12 +40,15 @@
     "sharp": "^0.28.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "webpack-pwa-manifest": "^4.3.0"
   },
   "dependencies": {
     "idb": "^6.1.2",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.5",
     "serviceworker-webpack-plugin": "^1.0.1"
   }

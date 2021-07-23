@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 const assert = require('assert');
 
 Feature('Favorite_Restaurant');

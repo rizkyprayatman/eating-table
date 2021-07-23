@@ -1,10 +1,8 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-use-before-define */
-/* eslint-disable quotes */
-import "regenerator-runtime";
-import "../styles/main.css";
-import "../styles/responsive.css";
+import 'regenerator-runtime';
+import '../styles/main.css';
+import '../styles/responsive.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 

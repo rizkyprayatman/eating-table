@@ -1,10 +1,5 @@
-/* eslint-disable comma-dangle */
-/* eslint-disable key-spacing */
-/* eslint-disable import/no-extraneous-dependencies */
 const { setHeadlessWhen } = require('@codeceptjs/configure');
 
-// turn on headless mode when running with HEADLESS=true environment variable
-// export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
@@ -16,8 +11,8 @@ exports.config = {
       show: true,
       windowSize: '1200x900',
       chrome: {
-        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
-      }
+        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      },
     },
   },
   include: {

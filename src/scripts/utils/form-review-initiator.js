@@ -1,7 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-alert */
-/* eslint-disable no-underscore-dangle */
-
 import RestaurantDb from '../data/restaurantdb';
 
 const FormReviewInitiator = (url, name, review) => {

@@ -1,6 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable no-undef */
-
 import UrlParser from '../../routes/url-perser';
 import { createRestaurantDetailTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';

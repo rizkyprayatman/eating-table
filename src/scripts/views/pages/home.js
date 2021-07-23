@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import RestaurantDb from '../../data/restaurantdb';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 

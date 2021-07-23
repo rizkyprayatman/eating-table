@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import LikeButtonInitiator from '../../src/scripts/utils/like-button-initiator';
 import FavRestaurantIdb from '../../src/scripts/data/favorite-restaurant-idb';
 

@@ -96,8 +96,7 @@ AppBar
   flex-direction: column;
   min-height: 300px;
   width: 100%;
-  background: url("/images/hero-xl.jpg");
-  background-position: center;
+  background: url("/images/hero-xl.jpg") center;
   object-fit: cover;
   text-align: center;
   border-radius: 0 0 20% 20% / 20%;
@@ -300,8 +299,12 @@ AppBar
 }
 
 .info-restaurant h2,
-h4 {
+h3 {
   text-align: left;
+}
+
+.info-restaurant span {
+  font-size: 20px;
 }
 
 .info-restaurant p {
@@ -356,6 +359,21 @@ h4 {
   padding: 10px;
   margin: 0 auto;
   text-align: center;
+}
+
+.info-db-reviews h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.info-db-reviews h3 {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.info-db-reviews h4 {
+  font-size: 16px;
 }
 
 .review {
@@ -423,11 +441,12 @@ footer {
   background-color: black;
 }
 
-.copyright p {
+.copyright h1 {
   margin: 0 auto;
+  font-size: medium;
 }
 .overlay {
-  background: url(../public/images/hero-image_2.jpg);
+  background: url("/images/hero-image_2-xl.jpg");
   text-align: center;
   width: 100%;
   height: auto;

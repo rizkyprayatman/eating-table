@@ -1,9 +1,8 @@
-/* eslint-disable linebreak-style */
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurants) => `
     <div class="img-db">
-        <img class="img-restaurant" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+        <img class="img-restaurant lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
         <div class="tittle-name">
             <h1>Restaurant</h1>
             <h2>${restaurants.name}</h2>
@@ -13,28 +12,28 @@ const createRestaurantDetailTemplate = (restaurants) => `
     <h1>Information</h1>
       <div class="info-db">
         <div class="info-restaurant">
-          <img src="${CONFIG.BASE_IMAGE_SMALL_URL + restaurants.pictureId}" alt="${restaurants.name}" />
-          <h3><span>Rating : ${restaurants.rating} <i class="fa fa-star"></i></span><h3>
+          <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_SMALL_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+          <h2><span>Rating : ${restaurants.rating} <i class="fa fa-star"></i></span></h2>
         </div>
         <div class="info-restaurant">
           <h2>${restaurants.name}</h2>
-          <h4>Lokasi : ${restaurants.city}</h4>
-          <h4>Alamat : ${restaurants.address}</h4>
-          <h4>Kategori : ${restaurants.categories.map((category) => category.name)}</h4>
-          <h4>Description :</h4>
+          <h3>Lokasi : ${restaurants.city}</h3>
+          <h3>Alamat : ${restaurants.address}</h3>
+          <h3>Kategori : ${restaurants.categories.map((category) => category.name)}</h3>
+          <h3>Description :</h3>
           <p>${restaurants.description}</p>
         </div>
       </div>
       <h1>Menu</h1>
       <div class="info-db-menu">
         <div class="info-menu">
-          <h3>Foods Menu</h3>
+          <h2>Foods Menu</h2>
           <ul>${restaurants.menus.foods.map((food) => `
             <li>${food.name}</li>
           `).join('')}</ul>
         </div>
         <div class="info-menu">
-          <h3>Drinks Menu</h3>
+          <h2>Drinks Menu</h2>
           <ul>${restaurants.menus.drinks.map((drink) => `
             <li>${drink.name}</li>
           `).join('')}</ul>
@@ -44,9 +43,9 @@ const createRestaurantDetailTemplate = (restaurants) => `
       <div class="info-db-reviews">
           ${restaurants.customerReviews.map((review) => `
           <div class="review">
-          <h4>${review.name}</h4>
-          <p>${review.date}</p>
-          <h5>${review.review}</h5>
+          <h2>${review.name}</h2>
+          <h3>${review.date}</h3>
+          <h4>${review.review}</h4>
           </div>
           `).join('')}
       </div>
@@ -57,7 +56,7 @@ const createRestaurantItemTemplate = (restaurants) => `
     <div class="card ${restaurants.Id}" id="mainContent">
         <div class="city">${restaurants.city}</div>
             <div class="img-tumb">
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"/>
+                <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"/>
         </div>
         <div class="details">
             <span class="rating">Rating : ${restaurants.rating} <i class="fa fa-star"></i></span>
@@ -71,7 +70,7 @@ const favoriteRestaurantItemTemplate = (restaurants) => `
     <div class="card ${restaurants.Id}" id="mainContent">
         <div class="city">${restaurants.city}</div>
             <div class="img-tumb">
-                <img src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"/>
+                <img class="lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}"/>
         </div>
         <div class="details">
             <span class="rating">Rating : ${restaurants.rating} <i class="fa fa-star"></i></span>

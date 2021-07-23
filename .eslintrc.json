@@ -12,5 +12,16 @@
         "sourceType": "module"
     },
     "rules": {
+        "linebreak-style": "off",
+        "no-underscore-dangle": "off",
+        "operator-linebreak": "off",
+        "implicit-arrow-linebreak": "off",
+        "no-console": "off",
+        "no-undef": "off",
+        "consistent-return": "off",
+        "no-prototype-builtins": "off",
+        "eslint-disable quotes": "off",
+        "no-restricted-globals": "off",
+        "import/no-extraneous-dependencies": "off"
     }
 }
